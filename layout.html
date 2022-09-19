@@ -11,13 +11,16 @@
     
     <title>Mulheres.Tech - Layout 1</title>
 </head>
+
 <body>
+
+    <a id="top"></a>
 
     <div id="wrap">
 
         <header>
             <a href="/" title="Página inicial">
-                <i class="fa-solid fa-laptop-code" title="Logotipo do site"></i>
+                <i class="fa-solid fa-laptop-code fa-fw" title="Logotipo do site"></i>
             </a>
             <h1>
                 Mulheres.Tech
@@ -26,10 +29,10 @@
         </header>
 
         <nav>
-            <a href="/"><i class="fa-solid fa-house-chimney"></i><span>Início</span></a>
-            <a href="/contacts.html"><i class="fa-solid fa-comments"></i><span>Contatos</span></a>
-            <a href="/about.html"><i class="fa-solid fa-circle-info"></i><span>Sobre</span></a>
-            <a href="/profile.html"><i class="fa-regular fa-user"></i></a>
+            <a href="/" title="Página inicial"><i class="fa-solid fa-house-chimney fa-fw"></i><span>Início</span></a>
+            <a href="/contacts.html" title="Faça contato"><i class="fa-solid fa-comments fa-fw"></i><span>Contatos</span></a>
+            <a href="/about.html" title="Sobre a gente"><i class="fa-solid fa-circle-info fa-fw"></i><span>Sobre</span></a>
+            <a href="/profile.html" title="Perfil do usuário"><i class="fa-regular fa-user fa-fw"></i></a>
         </nav>
 
         <main>
@@ -55,12 +58,52 @@
         </main>
 
         <footer>
-            <a href="/"><i class="fa-solid fa-house-chimney"></i></a>
-            <div>&copy; 2022 Vitória Soares</div>
-            <a href="#top"><i class="fa-solid fa-circle-up"></i></a>
+
+            <div id="fsup">
+
+                <nav id="fsocial">
+                    <a href="https://facebook.com/Luferat" target="_blank" title="Acesse nosso Facebook">
+                        <i class="fa-brands fa-square-facebook fa-fw"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://youtube.com/Luferat" target="_blank" title="Nosso canal no Youtube">
+                        <i class="fa-brands fa-square-youtube fa-fw"></i>
+                        <span>Youtube</span>
+                    </a>
+                    <a href="https://github.com/Luferat" target="_blank" title="Acesse nosso GitHub">
+                        <i class="fa-brands fa-square-github fa-fw"></i>
+                        <span>GitHub</span>
+                    </a>
+                </nav>
+
+                <nav id="ftools">
+                    <a href="/contacts" title="Faça contato conosco">
+                        <i class="fa-solid fa-comments fa-fw"></i>
+                        <span>Contatos</span>
+                    </a>
+                    <a href="/about" title="Conheça mais">
+                        <i class="fa-solid fa-circle-info fa-fw"></i>
+                        <span>Sobre</span>
+                    </a>
+                    <a href="/policies" title="Leia as políticas de privacidade">
+                        <i class="fa-solid fa-user-lock fa-fw"></i>
+                        <span>Sua privacidade</span>
+                    </a>
+                </nav>
+
+            </div>
+
+            <div id="finf">
+            <a href="/" title="Página inicial"><i class="fa-solid fa-house-chimney fa-fw"></i></a>
+            <div id="copy">&copy; 2022 Vitória Soares</div>
+            <a href="#top" title="Topo da página"><i class="fa-solid fa-circle-up fa-fw"></i></a>
+            </div>
+
         </footer>
 
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <script src="script.js"></script>
 
