@@ -21,7 +21,7 @@ a {
 
 /* Pseudo classe ":hover" → Ao passar o mouse sobre o elemento */
 a:hover {
-    color: rgb(255, 69, 0);
+    color: rgb(255, 20, 255);    
     text-decoration: underline;
 }
 
@@ -157,14 +157,105 @@ body {
 
 }
 
-/**************************
- * Estilizando o conteúdo *
- **************************/
+/*************************
+* Estilizando o conteúdo *
+*************************/
 
-#wrap>main {
+#wrap>main{
+    display: flex;
+    flex-direction: column;
+}
+
+#wrap>main article, #wrap>main aside {
     background-color: rgba(255, 255, 255, 1);
     padding: 0 1rem;
 
     /* Evita efeito da margem do primeiro e ultimo filhos do elemento */
     overflow: auto;
+}
+
+/* Barra lateral */
+#wrap>main aside {
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+    #wrap>main {
+        flex-direction: row;
+    }
+
+    #wrap>main article {
+        flex-grow: 1;
+        margin-bottom: .5rem;
+    }
+
+    #wrap>main aside {
+        margin: 0 .5rem 0 0;
+        min-width: 220px;
+        max-width: 220px;
+        margin-bottom: .5rem;
+    }
+}
+
+/*********
+* Rodapé *
+*********/
+
+#wrap>footer {
+    background-color: rgb(66, 0, 66);
+    margin: 0;
+    color: white;
+}
+
+#finf {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px dashed white;
+    margin-top: .5rem;
+}
+
+#finf a {
+    padding: .7rem;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: .25s;
+    font-size: 1rem;
+}
+
+#finf a:hover {
+    color: rgb(255, 20, 255);
+}
+
+#fsup {
+    display: flex;
+    padding: .5rem;
+    margin-top: none;
+    justify-content: space-between;
+}
+
+#fsup h4 {
+    margin: 0 0 .7rem 0;
+    font-weight: normal;
+}
+
+#fsup nav a {
+    display: block;
+    padding: .3rem 0;
+    font-size: .9rem;
+    color: white;
+}
+
+#fsup nav a:hover {
+    color: rgb(255, 20, 255);
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 426px) {
+    #fsup {
+        justify-content: space-around;
+    }
 }

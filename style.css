@@ -170,6 +170,7 @@ body {
     padding: 0 1rem;
 }
 
+/* Barra lateral */
 #wrap>main aside {
     margin: .5rem;
 }
@@ -244,7 +245,6 @@ body {
 
 #fsup nav a:hover {
     color: rgb(250, 167, 250);
-    text-decoration: none;
     text-decoration: underline;
 }
 
