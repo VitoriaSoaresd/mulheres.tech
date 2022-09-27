@@ -1,44 +1,27 @@
-/**
- * Folha de estilos do aplicativo.
- *
- * OBS1: Essas são as folhas de estilo (CSS) do tema (template) do aplicativo. 
- * Posteriormente, cada página (conteúdo) terá sua própria folha de estilos,
- * assim, somente as folhas de estilos necessárias serão carregadas.
- *
- * OBS2: Essas folhas de estilo estão definidas para "mobile first" (320px),
- * usando media queries (@media) para definir o layout em telas maiores.
- *
- * Para saber mais:
- *  • https://www.w3schools.com/css/
- *  • https://www.w3schools.com/cssref/css_selectors.asp
- *  • https://www.w3schools.com/cssref/
- */
-
-/**
- * Importa folhas de estilo para "reset" do CSS "Normalize" via CDN
- * Para saber mais:
- *   • https://necolas.github.io/normalize.css/
- *   • https://pt.wikipedia.org/wiki/Rede_de_fornecimento_de_conte%C3%BAdo
- */
- @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
-
- /**
-   * Importa a fonte "Lato" do Google Fonts.
-   *  
-   * A bilbioteca Google Fonts fornece milhares de fontes de uso livre para 
-   * aplicativos. Para saber mais, acesse:
-   * https://fonts.google.com/    
-   */
- @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
- 
- /***************
-  * Reset geral *
-  ***************/
+/***************
+ * Reset geral *
+ ***************/
  * {
-   /* Tamanho do elemento é definido pelas bordas */
-   box-sizing: border-box;
-   /* Remove serrilhado ao redor de imagens e links selecionados */
-   outline: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Reset dos elementos "root" (raiz) */
+html, body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    /* Fonte padrão do site */
+    font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+
+    /* Tamanho da fonte padrão → 1rem */
+    font-size: 16px;
+
+    /* Cor da fonte */
+    color: rgb(55,0,55);
 }
 
 /* Reset dos links */
@@ -145,6 +128,31 @@ body {
     color: rgb(250, 167, 250);
 }
 
+#wrap>nav a:first-child {
+    margin-right: auto;
+}
+
+#wrap>nav i {
+    font-size: 2rem;
+}
+
+#wrap>nav span {
+    display: block;
+    margin-top: .3rem;
+}
+
+/* Menu principal responsivo */
+@media screen and (min-width: 480px) {
+    #wrap>nav i {
+        font-size: 1.2rem;
+    }
+
+    #wrap>nav span {
+        display: inline;
+        margin-top: 0;
+    }
+}
+
 /***********
 * Conteúdo *
 ************/
@@ -160,10 +168,6 @@ body {
     overflow: auto;
     margin: 0 .5rem;
     padding: 0 1rem;
-
-
-  /* Assume margens dos elementos inicial e final */
-  overflow: auto;
 }
 
 /* Barra lateral */
@@ -193,7 +197,7 @@ body {
  * Rodapé *
  **********/
 
- #wrap>footer {
+#wrap>footer {
     background-color: rgb(99, 45, 121);
     border-radius: .5rem;
     margin: .5rem;
